@@ -4,7 +4,7 @@ body {
     padding: 0;
     display: grid;
     grid-template-areas: "sidebar-left main-content sidebar-right";
-    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-columns: 1fr 3fr 1fr;
     height: 100vh;
     width: fit-content;
 }
@@ -12,7 +12,7 @@ body {
 .container {
     display: grid;
     grid-template-areas: "sidebar-left main-content sidebar-right";
-    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-columns: 1fr 3fr 1fr;
     width: 100%;
 }
 
@@ -138,4 +138,22 @@ body {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        grid-template-areas: 
+            "sidebar-left main-content";
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .container {
+        grid-template-areas: 
+            "sidebar-left main-content";
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .sidebar-right {
+        display: none;
+    }
 }
